@@ -1,0 +1,17 @@
+{
+  "sap.app": {
+    "id": "mickey",
+    "type": "application",
+    "title": "My first app",
+    "applicationVersion": {
+      "version": "1.0.0"
+    }
+  },
+  "sap.ui5": {
+    "rootView": {
+      "viewName": "mickey.view.Main",
+      "type": "JS",
+      "id": "Main"
+    }
+  }
+}
