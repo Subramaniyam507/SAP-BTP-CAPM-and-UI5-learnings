@@ -1,0 +1,9 @@
+<anubhav:View xmlns:m="sap.m" controllerName="mickey.controller.Main"
+xmlns:anubhav="sap.ui.core.mvc" xmlns:form="sap.ui.layout.form"  >
+<form:SimpleForm>
+<form:content>
+</form:content>
+</form:SimpleForm>
+<m:Input id='in1'></m:Input>
+<m:Button text="Click Xml Button" press="onClickXmlButtonButtonPress"></m:Button>
+</anubhav:View>

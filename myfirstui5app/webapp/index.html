@@ -10,16 +10,21 @@
 
                 <script>
              
-                   var oView = new sap.ui.view({
-                    viewName:"",
-                    id:"idMain",
-                    type:"JS"
-                   })
+                   
 
-                   oView.placeAt("zkas")
+                   var oView2 = new sap.ui.view({
+                                           viewName: "mickey.view.MyXml",
+                                          id: "idXmlview",
+                                       type: "XML"
+                                       });
+
+                  oView2.placeAt("bingo")
                 </script>
+
+                
     </head>
     <body class = "sapUiBody">
-        <div id='zkas'></div>
+        
+        <div id="bingo"></div>
     </body>
 </html>
