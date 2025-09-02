@@ -1,9 +1,30 @@
 <anubhav:View xmlns:m="sap.m" controllerName="mickey.controller.Main"
 xmlns:anubhav="sap.ui.core.mvc" xmlns:form="sap.ui.layout.form"  >
-<form:SimpleForm>
+
+<form:SimpleForm editable="true">
 <form:content>
+
+  <m:Label text = "Emp id"/>
+  <m:Input width="20%" id="idEmpid" value = "{/empStr/empId}" enabled ="{/empStr/minion}" />
+   <m:Label text = "Emp Name"/>
+  <m:Input width="20%" id="idEmpName" value = "{path: '/empStr/empName'}" enabled ="{/empStr/minion}"/>
+   <m:Label text = "Emp Salary"/>
+  <m:Input width="20%" id="idEmpSalary" enabled="{= ${/empStr/empName} === 'Subbu' ? false:true}"/>
+   <m:Label text = "Emp Currency"/>
+  <m:Input width="20%" id="idEmpcurr" enabled ="{/empStr/minion}"/>
+   <m:Label text = "Smoker"/>
+  <m:CheckBox width="20%" id="idSmoker" selected= "{/empStr/smoker}" enabled ="{/empStr/minion}"/>
+  <m:Label/>
+  <m:Button text="Print Data" press="onPrintData"/>
+  <m:Button text="magicButton" press="onMagic"/>
+
+
 </form:content>
 </form:SimpleForm>
 <m:Input id='in1'></m:Input>
 <m:Button text="Click Xml Button" press="onClickXmlButtonButtonPress"></m:Button>
-</anubhav:View>
+<m:DatePicker id="DP101"
+value="2015-11-23"
+displayFormat="MM-y"
+change="handleChange"></m:DatePicker>
+</anubhav:View> 

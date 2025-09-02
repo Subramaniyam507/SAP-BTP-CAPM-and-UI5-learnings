@@ -1,0 +1,33 @@
+{
+  "empStr": {
+    "empId": 50,
+    "empName": "Subbu",
+    "salary": 9000,
+    "currency": "YEN",
+    "smoker": true,
+    "minion": true
+  },
+  "empTable": [
+    {
+      "empId": 500,
+      "empName": "Abc",
+      "salary": 9000,
+      "currency": "Dollar",
+      "smoker": true
+    },
+    {
+      "empId": 1010,
+      "empName": "Anubhav",
+      "salary": 50000,
+      "currency": "INR",
+      "smoker": true
+    },
+    {
+      "empId": 1020,
+      "empName": "Ananya",
+      "salary": 95000,
+      "currency": "USD",
+      "smoker": true
+    }
+  ]
+}
