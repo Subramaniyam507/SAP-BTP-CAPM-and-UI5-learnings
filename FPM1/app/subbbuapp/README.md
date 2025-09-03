@@ -1,16 +1,16 @@
 ## Application Details
 |               |
 | ------------- |
-|**Generation Date and Time**<br>Tue Sep 02 2025 05:07:30 GMT+0000 (Coordinated Universal Time)|
+|**Generation Date and Time**<br>Wed Sep 03 2025 03:37:33 GMT+0000 (Coordinated Universal Time)|
 |**App Generator**<br>SAP Fiori Application Generator|
 |**App Generator Version**<br>1.18.6|
 |**Generation Platform**<br>SAP Business Application Studio|
 |**Template Used**<br>Custom Page V4|
 |**Service Type**<br>Local CAP|
 |**Service URL**<br>http://localhost:4004/processor/|
-|**Module Name**<br>anubhavflexapp|
-|**Application Title**<br>My travel app |
-|**Namespace**<br>com.anubhav.travel|
+|**Module Name**<br>subbbuapp|
+|**Application Title**<br>My travel app|
+|**Namespace**<br>com.subbu|
 |**UI5 Theme**<br>sap_horizon|
 |**UI5 Version**<br>1.139.0|
 |**Enable Code Assist Libraries**<br>True|
@@ -18,7 +18,7 @@
 |**Add Eslint configuration**<br>False|
 |**Main Entity**<br>Travel|
 
-## anubhavflexapp
+## subbbuapp
 
 An SAP Fiori application.
 
@@ -26,7 +26,7 @@ An SAP Fiori application.
 
 -   This app has been generated using the SAP Fiori tools - App Generator, as part of the SAP Fiori tools suite.  To launch the generated app, start your CAP project:  and navigate to the following location in your browser:
 
-http://localhost:4004/anubhavflexapp/webapp/index.html
+http://localhost:4004/com.subbu.subbbuapp/index.html
 
 #### Pre-requisites:
 

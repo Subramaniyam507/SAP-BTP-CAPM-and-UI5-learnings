@@ -2,7 +2,7 @@
 
 specVersion: "3.1"
 metadata:
-  name: com.anubhav.travel.anubhavflexapp
+  name: com.subbu.subbbuapp
 type: application
 server:
   customMiddleware:

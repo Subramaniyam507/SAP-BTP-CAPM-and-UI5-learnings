@@ -10,14 +10,14 @@ using {
 namespace sap.fe.cap.travel;
 
 entity Travel : managed {
-  key TravelUUID : String(30);
+  key TravelUUID : String;
   TravelID       : Integer @readonly default 0 @Common.Text: Description;
   BeginDate      : Date;
   EndDate        : Date;
   BookingFee     : Decimal(16, 3);
   TotalPrice     : Decimal(16, 3) @readonly;
   CurrencyCode   : Currency;
-  Description    : String(1024);
+  Description    : String;
   TravelStatus   : Association to TravelStatus  @readonly @Common.ValueListWithFixedValues;
   GoGreen        : Boolean default false;
   GreenFee       : Decimal(16, 3) @Core.Computed @readonly;
@@ -27,10 +27,10 @@ entity Travel : managed {
   to_Booking     : Composition of many Booking on to_Booking.to_Travel = $self;
 };
 entity Booking : managed {
-  key BookingUUID   : String(30);
+  key BookingUUID   : String;
   BookingID         : Integer @Core.Computed;
   BookingDate       : Date;
-  ConnectionID      : String(4);
+  ConnectionID      : String;
   FlightDate        : Date;
   FlightPrice       : Decimal(16, 3);
   CurrencyCode      : Currency;

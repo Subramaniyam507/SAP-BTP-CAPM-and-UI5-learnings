@@ -6,9 +6,12 @@
   "license": "UNLICENSED",
   "private": true,
   "dependencies": {
+    "@cap-js/hana": "^2",
     "@sap/cds": "^9",
-    "express": "^4",
-    "@cap-js/hana": "^2"
+    "@sap/eslint-plugin-ui5-jsdocs": "^2.0.5",
+    "@sapui5/ts-types": "^1.92.2",
+    "eslint": "^7.32.0",
+    "express": "^4"
   },
   "engines": {
     "node": ">=20"
@@ -18,15 +21,16 @@
     "@cap-js/sqlite": "^2",
     "@sap/cds-dk": ">=8",
     "cds-plugin-ui5": "^0.13.0",
-    "rimraf": "^5.0.5",
-    "mbt": "^1.2.29"
+    "mbt": "^1.2.29",
+    "rimraf": "^5.0.5"
   },
   "scripts": {
     "start": "cds-serve",
     "watch-anubhavflexapp": "cds watch --open com.anubhav.travel.anubhavflexapp/index.html?sap-ui-xx-viewCache=false --livereload false",
     "undeploy": "cf undeploy FPM1 --delete-services --delete-service-keys --delete-service-brokers",
     "build": "rimraf resources mta_archives && mbt build --mtar archive",
-    "deploy": "cf deploy mta_archives/archive.mtar --retries 1"
+    "deploy": "cf deploy mta_archives/archive.mtar --retries 1",
+    "watch-subbbuapp": "cds watch --open com.subbu.subbbuapp/index.html?sap-ui-xx-viewCache=false --livereload false"
   },
   "cds": {
     "requires": {
@@ -37,6 +41,7 @@
     "app/*"
   ],
   "sapux": [
-    "app/anubhavflexapp"
+    "app/anubhavflexapp",
+    "app/subbbuapp"
   ]
 }

@@ -70,9 +70,23 @@ modules:
       - comanubhavtravelanubhavflexapp.zip
       name: comanubhavtravelanubhavflexapp
       target-path: resources/
+    - artifacts:
+      - comsubbusubbbuapp.zip
+      name: comsubbusubbbuapp
+      target-path: resources/
 - name: comanubhavtravelanubhavflexapp
   type: html5
   path: app/anubhavflexapp
+  build-parameters:
+    build-result: dist
+    builder: custom
+    commands:
+    - npm install
+    - npm run build:cf
+    supported-platforms: []
+- name: comsubbusubbbuapp
+  type: html5
+  path: app/subbbuapp
   build-parameters:
     build-result: dist
     builder: custom

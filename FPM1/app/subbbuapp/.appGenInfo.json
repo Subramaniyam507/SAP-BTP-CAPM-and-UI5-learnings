@@ -1,14 +1,14 @@
 {
   "generationParameters": {
-    "generationDate": "Tue Sep 02 2025 05:07:30 GMT+0000 (Coordinated Universal Time)",
+    "generationDate": "Wed Sep 03 2025 03:37:33 GMT+0000 (Coordinated Universal Time)",
     "generatorPlatform": "SAP Business Application Studio",
     "serviceType": "Local CAP",
     "metadataFilename": "",
     "serviceUrl": "http://localhost:4004/processor/",
-    "appName": "anubhavflexapp",
-    "appTitle": "My travel app ",
+    "appName": "subbbuapp",
+    "appTitle": "My travel app",
     "appDescription": "An SAP Fiori application.",
-    "appNamespace": "com.anubhav.travel",
+    "appNamespace": "com.subbu",
     "ui5Theme": "sap_horizon",
     "ui5Version": "1.139.0",
     "enableCodeAssist": true,
@@ -24,6 +24,6 @@
         "value": "Travel"
       }
     ],
-    "launchText": "To launch the generated app, start your CAP project:  and navigate to the following location in your browser:\n\nhttp://localhost:4004/anubhavflexapp/webapp/index.html"
+    "launchText": "To launch the generated app, start your CAP project:  and navigate to the following location in your browser:\n\nhttp://localhost:4004/com.subbu.subbbuapp/index.html"
   }
 }

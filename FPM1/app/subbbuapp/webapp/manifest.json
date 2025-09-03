@@ -1,7 +1,7 @@
 {
   "_version": "1.76.0",
   "sap.app": {
-    "id": "com.anubhav.travel.anubhavflexapp",
+    "id": "com.subbu.subbbuapp",
     "type": "application",
     "i18n": "i18n/i18n.properties",
     "applicationVersion": {
@@ -13,7 +13,7 @@
     "sourceTemplate": {
       "id": "@sap/generator-fiori:fpm",
       "version": "1.18.6",
-      "toolsId": "8dee7bd8-41d5-4953-859c-46974079c55e"
+      "toolsId": "ef79824c-8dc3-4d54-bc9d-6a0aa3dce532"
     },
     "dataSources": {
       "mainService": {
@@ -49,7 +49,8 @@
       "libs": {
         "sap.m": {},
         "sap.ui.core": {},
-        "sap.fe.core": {}
+        "sap.fe.core": {},
+        "sap.fe.macros": {}
       }
     },
     "contentDensities": {
@@ -60,7 +61,7 @@
       "i18n": {
         "type": "sap.ui.model.resource.ResourceModel",
         "settings": {
-          "bundleName": "com.anubhav.travel.anubhavflexapp.i18n.i18n"
+          "bundleName": "com.subbu.subbbuapp.i18n.i18n"
         }
       },
       "": {
@@ -98,7 +99,7 @@
             "settings": {
               "navigation": {},
               "contextPath": "/Travel",
-              "viewName": "com.anubhav.travel.anubhavflexapp.ext.main.Main"
+              "viewName": "com.subbu.subbbuapp.ext.main.Main"
             }
           }
         }
