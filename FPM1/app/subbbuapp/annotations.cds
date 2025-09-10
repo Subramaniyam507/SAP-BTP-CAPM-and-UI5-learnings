@@ -12,6 +12,11 @@ annotate service.Travel with @(
             Value : TravelID,
             Label : 'TravelID',
         },
+          {
+            $Type : 'UI.DataField',
+            Value : Description,
+            Label : 'Description',
+        },
    {
             $Type : 'UI.DataField',
             Value : TravelStatus_code,
@@ -48,6 +53,7 @@ annotate service.Travel with @(
             Value : TotalPrice,
             Label : 'Total Price',
         },
+            
        {
            $Type : 'UI.DataFieldForAction',
            Action : 'TravelService.acceptTravel',
@@ -58,5 +64,17 @@ annotate service.Travel with @(
        },
       
     ],
+    UI.HeaderInfo : {
+        TypeName : '{i18n>Travel}',
+        TypeNamePlural : '{i18n>Travels}',
+        Title : {
+            $Type : 'UI.DataField',
+            Value : Description,
+        },
+        Description : {
+            $Type : 'UI.DataField',
+            Value : Description,
+        },
+    },
 );
 

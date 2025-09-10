@@ -1,5 +1,5 @@
 {
-  "xsappname": "fpm1",
+  "xsappname": "v",
   "tenant-mode": "dedicated",
   "description": "Security profile of called application",
   "scopes": [
