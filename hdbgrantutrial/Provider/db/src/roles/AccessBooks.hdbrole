@@ -1,0 +1,13 @@
+{
+    "role": {
+    "name": "AccessBooks",
+  "object_privileges": [
+    {
+      "name": "namespace.my.bookshop::Books",
+      "type": "TABLE",
+      "privileges": ["SELECT"]
+    }
+  ]
+}
+  
+}

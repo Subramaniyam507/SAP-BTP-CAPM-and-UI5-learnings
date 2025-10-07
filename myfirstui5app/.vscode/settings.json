@@ -1,7 +1,0 @@
-{
-    "SAP HANA Database Explorer.ShowXsAdvancedConnections": true,
-  
-  "ui5.plugin.explorer.enabled": true // enables UI5 Explorer tree
-
-
-}

@@ -1,0 +1,7 @@
+{
+  "consumer-bookshop": {
+   "object_owner": {"global_object_privileges": [],"global_roles": [],"object_privileges": [],"schema_privileges": [],"schema_roles": [],"system_privileges": []
+}
+    }
+}
+

@@ -2,57 +2,25 @@
 	xmlns:f="sap.f">
  
     <f:DynamicPage id="FilterBarDefault" class="sapUiResponsiveContentPadding">
-		<f:title>
+<f:title>
 			<f:DynamicPageTitle id="_IDGenDynamicPageTitle1">
 				<f:heading>
 					<Title id="_IDGenTitle1" text="Filter Bar" level="H2" />
 				</f:heading>
 				<f:snappedContent>
-				<Panel headerText="Highest Price" id="idPanel1">
-				<HeaderContainer scrollStep="200" showDividers="false" id="idHeaderContainer" content="{
-				path: '/Travel',
-				parameters:{
-				$filter: 'TravelStatus_code eq \'O\' and IsActiveEntity eq false or SiblingEntity/IsActiveEntity eq null'},
-				$orderby:'TotalPrice desc'
-
-				
-				}"
-				
-				> 
-				<GenericTile id="_IDGenGenericTile" header = "Travel {TravelID}" subheader="{Description}" >
-				<TileContent id="_IDGenTileContent"
-					
-					footer="{to_Customer/LastName}"
-					unit="{CurrencyCode}"
-				>
-					<NumericContent id="_IDGenNumericContent"
-						
-						value="{TotalPrice}"
-						valueColor="Good"
-						scale="k"
-						
-					>
-						
-					</NumericContent>
-				</TileContent>
-				</GenericTile>
-
-				</HeaderContainer>
-				</Panel>
-					<Panel headerText="Filter Count" id="idPanel2">
-					<Text id="_IDGenText" text="{fbConditions>/filtersTextInfo}" />
-					</Panel>
-				
-					
+					<Text id = "Selected" text="{fbConditions>/filtersTextInfo}" />
 				</f:snappedContent>
 			</f:DynamicPageTitle>
 		</f:title>
 		<f:header>
 			<f:DynamicPageHeader id="_IDGenDynamicPageHeader1" pinnable="true">
 				<VBox id="_IDGenVBox1">
-					<macros:FilterBar id="FilterBar" metaPath="/Travel/@com.sap.vocabularies.UI.v1.SelectionFields"
-                
-                    filterChanged="onFilterBarFilterChanged"/>
+					<macros:FilterBar
+						metaPath="/Travel/@com.sap.vocabularies.UI.v1.SelectionFields"
+						id="FilterBar"
+						search=".handlers.onFiltersChanged"
+						filterChanged=".handlers.onFiltersChanged"
+					/>
 				</VBox>
 			</f:DynamicPageHeader>
 		</f:header>
