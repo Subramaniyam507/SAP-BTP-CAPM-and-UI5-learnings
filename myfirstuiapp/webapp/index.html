@@ -1,0 +1,24 @@
+<html>
+    <head>
+            <script src ="https://ui5.sap.com/resources/sap-ui-core.js"
+                data-sap-ui-libs = "sap.m" 
+                data-sap-ui-theme = "sap_fiori_3_dark"
+                data-sap-ui-resourceroots = '{
+                    "mickey":"./"
+                }'></script>
+
+                <script>
+                    var oSpidy = new sap.m.Button("idSpidy",{
+                        text:'Click me',
+                        press:function(){
+                            $("#idSpidy").fadeOut(2000)
+                        }
+                    })
+
+                    oSpidy.placeAt("zkas")
+                </script>
+    </head>
+    <body class = "sapUiBody">
+    <div id ="zkas"></div>
+    </body>
+</html>
