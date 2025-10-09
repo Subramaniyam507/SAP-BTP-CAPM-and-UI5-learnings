@@ -8,17 +8,24 @@
                 }'></script>
 
                 <script>
-                    var oSpidy = new sap.m.Button("idSpidy",{
-                        text:'Click me',
-                        press:function(){
-                            $("#idSpidy").fadeOut(2000)
-                        }
+                    // var oView = new sap.ui.view({
+                    //     viewName:"mickey.view.Main",
+                    //     id:"idMain",
+                    //     type:"JS"
+                    // })
+
+                    var oView2 = new sap.ui.view({
+                         viewName:"mickey.view.MyXml",
+                        id:"idXmlView",
+                        type:"XML"
                     })
 
-                    oSpidy.placeAt("zkas")
+                    // oView.placeAt("zkas")
+                    oView2.placeAt("bingo")
                 </script>
     </head>
     <body class = "sapUiBody">
-    <div id ="zkas"></div>
+    <!-- <div id ="zkas"></div> -->
+    <div id = "bingo"></div>
     </body>
 </html>

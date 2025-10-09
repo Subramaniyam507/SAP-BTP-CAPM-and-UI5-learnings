@@ -1,0 +1,26 @@
+<anubhav:View
+	controllerName="mickey.controller.Main"
+	xmlns:anubhav="sap.ui.core.mvc"
+	xmlns="sap.m"
+    xmlns:form="sap.ui.layout.form"
+	>
+
+    <form:SimpleForm >
+      <form:content>
+        <Label text="Emp Id" />
+        <Input width="25%" id="idEmpid"/>
+        <Label text="Emp Name" />
+        <Input width="25%" id="idEmpName"/>   
+          <Label text="Salary" />
+        <Input width="25%" id="idSal"/>
+         <Label text="Currency" />
+        <Input width="25%" id="idCurr"/>
+         <Label text="Smoker" />
+        <CheckBox id="idSmoker"/>
+      </form:content>
+    </form:SimpleForm>
+<Input id="idXmlField" width="40%"/>
+<Button text="ClickXml" press="onClickButton"/>
+    
+
+</anubhav:View>
