@@ -5,18 +5,20 @@
     xmlns:form="sap.ui.layout.form"
 	>
 
-    <form:SimpleForm >
+    <form:SimpleForm editable = "true">
       <form:content>
         <Label text="Emp Id" />
-        <Input width="25%" id="idEmpid"/>
+        <Input width="25%" id="idEmpId" value="{empStr/empId}"/>
         <Label text="Emp Name" />
-        <Input width="25%" id="idEmpName"/>   
+        <Input width="25%" id="idEmpName" value="{empStr/empName}"/>   
           <Label text="Salary" />
-        <Input width="25%" id="idSal"/>
+        <Input width="25%" id="idSal" value="{empStr/salary}"/>
          <Label text="Currency" />
-        <Input width="25%" id="idCurr"/>
+        <Input width="25%" id="idCurr" value="{empStr/currency}"/>
          <Label text="Smoker" />
         <CheckBox id="idSmoker"/>
+        <Label/>
+        <Button text="Print Data" press ="onPrintData" />
       </form:content>
     </form:SimpleForm>
 <Input id="idXmlField" width="40%"/>
