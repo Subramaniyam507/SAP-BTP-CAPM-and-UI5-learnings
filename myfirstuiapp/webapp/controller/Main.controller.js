@@ -18,27 +18,32 @@ sap.ui.define([
                     "currency":"USD",
                     "smoker": false
                 },
-                "empTable":[
-                    {
-                    "empId":5010,
-                    "empName":"Bilal",
-                    "salary":1500,
-                    "currency":"EURO",
-                    "smoker": true
-                },
-                {
-                     "empId":50220,
-                    "empName":"Anany",
-                    "salary":112500,
-                    "currency":"EURO",
-                    "smoker": false
-                }
-                ]
+                // "empTable":[
+                //     {
+                //     "empId":5010,
+                //     "empName":"Bilal",
+                //     "salary":1500,
+                //     "currency":"EURO",
+                //     "smoker": true
+                // },
+                // {
+                //      "empId":50220,
+                //     "empName":"Anany",
+                //     "salary":112500,
+                //     "currency":"EURO",
+                //     "smoker": false
+                // }
+                // ]
             }
             oModel.setData(data);
 
-            sap.ui.getCore().setModel(oModel)
-            console.log(sap.ui.getCore().getModel())
+            this.getView().setModel(oModel);
+            console.log(this.getView().getModel().getData());
+            console.log('View:', this.getView());
+            console.log('Model:', this.getView().getModel());
+             console.log('Model Data:', this.getView().getModel().getData());
+
+          
         },
         myCode:function(){
 

@@ -1,0 +1,39 @@
+{
+    "empStr": {
+        "empId": 7000,
+        "empName": "John Snow",
+        "salary": 15000,
+        "currency": "EUR",
+        "smoker": true,
+        "minion": true
+    },
+    "empTable": [
+    {
+        "empId": 7001,
+        "empName": "Alia",
+        "salary": 36900,
+        "currency": "USD",
+        "smoker": false
+    },
+    {
+        "empId": 7002,
+        "empName": "Denerias",
+        "salary": 5000,
+        "currency": "AED",
+        "smoker": false
+    },
+    {
+        "empId": 7003,
+        "empName": "Robert",
+        "salary": 8500,
+        "currency": "JPY",
+        "smoker": true
+    },
+    {
+        "empId": 7004,
+        "empName": "Sarsi",
+        "salary": 25900,
+        "currency": "USD",
+        "smoker": false
+    }]
+}

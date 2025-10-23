@@ -1,28 +1,26 @@
-<anubhav:View
-	controllerName="mickey.controller.Main"
-	xmlns:anubhav="sap.ui.core.mvc"
-	xmlns="sap.m"
-    xmlns:form="sap.ui.layout.form"
-	>
+<mvc:View
+  controllerName="mickey.controller.Main"
+  xmlns:mvc="sap.ui.core.mvc"
+  xmlns="sap.m"
+  xmlns:form="sap.ui.layout.form">
 
-    <form:SimpleForm editable = "true">
-      <form:content>
-        <Label text="Emp Id" />
-        <Input width="25%" id="idEmpId" value="{empStr/empId}"/>
-        <Label text="Emp Name" />
-        <Input width="25%" id="idEmpName" value="{empStr/empName}"/>   
-          <Label text="Salary" />
-        <Input width="25%" id="idSal" value="{empStr/salary}"/>
-         <Label text="Currency" />
-        <Input width="25%" id="idCurr" value="{empStr/currency}"/>
-         <Label text="Smoker" />
-        <CheckBox id="idSmoker"/>
-        <Label/>
-        <Button text="Print Data" press ="onPrintData" />
-      </form:content>
-    </form:SimpleForm>
-<Input id="idXmlField" width="40%"/>
-<Button text="ClickXml" press="onClickButton"/>
-    
-
-</anubhav:View>
+  <form:SimpleForm editable="true">
+    <form:content>
+   
+      <Label text="Emp Id" />
+      <Input width="25%" id="idEmpId"  value="{empStr/empId}" />
+      <Label text="Emp Name" />
+      <Input width="25%" id="idEmpName" value="{empStr/empName}" />
+      <Label text="Salary" />
+      <Input width="25%" id="idSal" value="{empStr/salary}" />
+      <Label text="Currency" />
+      <Input width="25%" id="idCurr" value="{empStr/currency}" />
+      <Label text="Smoker" />
+      <CheckBox id="idSmoker" selected="{empStr/smoker}" />
+      <Label/>
+      <Button text="Print Data" press="onPrintData" />
+    </form:content>
+  </form:SimpleForm>
+  <Input id="idXmlField" width="40%"/>
+  <Button text="ClickXml" press="onClickButton"/>
+</mvc:View>

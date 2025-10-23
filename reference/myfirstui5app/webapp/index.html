@@ -1,0 +1,47 @@
+<html>
+    <head>
+        <!-- UI5 bootstraping -->
+        <script src="https://ui5.sap.com/resources/sap-ui-core.js"
+                data-sap-ui-libs="sap.m"
+                data-sap-ui-theme="sap_fiori_3_dark"
+                data-sap-ui-resourceroots='{
+                    "mickey" : "./"
+                }'
+                data-sap-ui-bindingSyntax="complex"
+        ></script>
+
+        <script>
+
+            //Create the object of our view
+            // var oView = new sap.ui.view({
+            //     viewName: "mickey.view.Main",
+            //     id: "idMain",
+            //     type: "JS"
+            // });
+
+            //To ensure that SAPUI libs are fully loaded
+            sap.ui.getCore().attachInit(function(){
+                //Create object of XML view
+                var oView2 = new sap.ui.view({
+                                viewName: "mickey.view.MyXml",
+                                id: "idXMLView",
+                                type: "XML"
+                            });
+
+                oView2.placeAt("bingo");
+            });
+
+            
+            //oView2.setVisible(false);
+            //provided by SAP a function to put our control in DOM body
+            //oView.placeAt("zkas");
+
+        </script>
+
+
+    </head>
+    <body class="sapUiBody">
+        <div id="zkas"></div>
+        <div id="bingo"></div>
+    </body>
+</html>

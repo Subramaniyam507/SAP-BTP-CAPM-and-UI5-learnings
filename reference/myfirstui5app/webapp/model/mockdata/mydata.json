@@ -1,0 +1,71 @@
+{
+    "empStr": {
+        "empId": 5000,
+        "empName": "Anubhav",
+        "salary": 4999,
+        "currency": "USD",
+        "smoker": true,
+        "minion": true
+    },
+    "empTable": [
+    {
+        "empId": 1010,
+        "empName": "Bilal",
+        "salary": 1500,
+        "currency": "EUR",
+        "smoker": true,
+        "gender": "https://cdn1.iconfinder.com/data/icons/user-pictures/101/malecostume-512.png",
+        "mStat": "M",
+        "rating": 3
+    },
+    {
+        "empId": 1022,
+        "empName": "Sonia",
+        "salary": 950000,
+        "currency": "INR",
+        "smoker": false,
+        "gender": "https://static.vecteezy.com/system/resources/previews/002/002/257/non_2x/beautiful-woman-avatar-character-icon-free-vector.jpg",
+        "mStat": "S",
+        "rating": 4
+    },
+    {
+        "empId": 1023,
+        "empName": "Rahul",
+        "salary": 5000,
+        "currency": "EUR",
+        "smoker": false,
+        "gender": "https://cdn1.iconfinder.com/data/icons/user-pictures/101/malecostume-512.png",
+        "mStat": "U",
+        "rating": 2
+    },
+    {
+        "empId": 1024,
+        "empName": "Sofia",
+        "salary": 69000,
+        "currency": "INR",
+        "smoker": true,
+        "gender": "https://static.vecteezy.com/system/resources/previews/002/002/257/non_2x/beautiful-woman-avatar-character-icon-free-vector.jpg",
+        "mStat": "M",
+        "rating": 5
+    },
+    {
+        "empId": 1025,
+        "empName": "Mahak",
+        "salary": 15000,
+        "currency": "USD",
+        "smoker": false,
+        "gender": "https://static.vecteezy.com/system/resources/previews/002/002/257/non_2x/beautiful-woman-avatar-character-icon-free-vector.jpg",
+        "mStat": "S",
+        "rating": 4
+    },
+    {
+        "empId": 1026,
+        "empName": "Mathias",
+        "salary": 9800,
+        "currency": "EUR",
+        "smoker": false,
+        "gender": "https://cdn1.iconfinder.com/data/icons/user-pictures/101/malecostume-512.png",
+        "mStat": "M",
+        "rating": 2
+    }]
+}
