@@ -1,49 +1,58 @@
 sap.ui.define([
     "sap/ui/core/mvc/Controller",
-	"sap/ui/model/json/JSONModel"
+	"sap/ui/model/json/JSONModel",
+    "mickey/model/model"
 ], function (Controller,
-	JSONModel) {
+	JSONModel,
+	model) {
     "use strict";
 
     return Controller.extend("mickey.controller.Main", {
         oView: null,
           onInit:function(){
-            this.oView = this.getView()
-            var oModel = new sap.ui.model.json.JSONModel();
-            const data = {
-                "empStr":{
-                    "empId":500,
-                    "empName":"anubhav",
-                    "salary":11000,
-                    "currency":"USD",
-                    "smoker": false
-                },
-                // "empTable":[
-                //     {
-                //     "empId":5010,
-                //     "empName":"Bilal",
-                //     "salary":1500,
-                //     "currency":"EURO",
-                //     "smoker": true
-                // },
-                // {
-                //      "empId":50220,
-                //     "empName":"Anany",
-                //     "salary":112500,
-                //     "currency":"EURO",
-                //     "smoker": false
-                // }
-                // ]
-            }
-            oModel.setData(data);
-
-            this.getView().setModel(oModel);
-            console.log(this.getView().getModel().getData());
-            console.log('View:', this.getView());
-            console.log('Model:', this.getView().getModel());
-             console.log('Model Data:', this.getView().getModel().getData());
+            // this.oView = this.getView()
+            // var oModel = new sap.ui.model.json.JSONModel();
+            // const data = 
+            // oModel.setData(data);
+            let sURL = "model/mockdata/mydata.json"
+            let sUrl2 =  "model/mockdata/another.json"
+            var  oModel = model.createMyJsonModel(sURL);
+            var oModel2 = model.createMyJsonModel(sUrl2) 
+            // this.getView().setModel(oModel);
+             sap.ui.getCore().setModel(oModel);
+             sap.ui.getCore().setModel(oModel2,"got")
+            
+            
 
           
+        },
+        /**
+         * @override
+         * @returns {void|undefined}
+         */
+
+
+        // not working
+        onBeforeRendering: function() {
+           var oModel = sap.ui.getCore().getModel();
+           var sSal = oModel.getProperty("/empStr/salary")
+           if(sSal > 5000){
+            this.getView().byId("idMagic").setVisible(false)
+           }
+            
+        
+
+        },
+        itsMagic:function(){
+            var oModel = sap.ui.getCore().getModel();
+            var minion = oModel.getProperty("/empStr/minion")
+
+            if(minion = true){
+                oModel.setProperty("/empStr/minion",false)
+            }
+            else{
+oModel.setProperty("/empStr/minion",true)
+            }
         },
         myCode:function(){
 
@@ -65,19 +74,22 @@ sap.ui.define([
         },
         onPrintData:function(){
           
-            var oEmpid = this.oView.byId("idEmpId");
-            var oEmpName = this.oView.byId("idEmpName");
-            var oSalary = this.oView.byId("idSal");
-            var oCurrency = this.oView.byId("idCurr");
-            var oSmoker = this.oView.byId("idSmoker");
+            // var oEmpid = this.oView.byId("idEmpId");
+            // var oEmpName = this.oView.byId("idEmpName");
+            // var oSalary = this.oView.byId("idSal");
+            // var oCurrency = this.oView.byId("idCurr");
+            // var oSmoker = this.oView.byId("idSmoker");
           
-            var sEmpid = oEmpid.getValue()
-            var sEmpName = oEmpName.getValue()
-            var sSalary = oSalary.getValue()
-            var sCurrency = oCurrency.getValue()
-            var sSmoker = oSmoker.getSelected()
+            // var sEmpid = oEmpid.getValue()
+            // var sEmpName = oEmpName.getValue()
+            // var sSalary = oSalary.getValue()
+            // var sCurrency = oCurrency.getValue()
+            // var sSmoker = oSmoker.getSelected()
 
-            alert(`${sEmpid} ${sEmpName} ${sSalary} ${sCurrency} ${sSmoker}`)
+            var oModel = sap.ui.getCore().getModel();
+            var sData = oModel.getProperty('/empStr') 
+
+            console.log(`${sData}`)
         }
       
 

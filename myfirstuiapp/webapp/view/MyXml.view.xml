@@ -1,26 +1,99 @@
-<mvc:View
-  controllerName="mickey.controller.Main"
+<mvc:View controllerName="mickey.controller.Main"
   xmlns:mvc="sap.ui.core.mvc"
   xmlns="sap.m"
-  xmlns:form="sap.ui.layout.form">
+  xmlns:form="sap.ui.layout.form"
+  xmlns:table="sap.ui.table"
+  xmlns:core="sap.ui.core">
+  <table:Table rows="{/empTable}">
+    <table:columns>
 
+      <table:Column label="Emp id">
+        <table:template>
+          <Text text="{empId}" />
+        </table:template>
+      </table:Column>
+
+      <table:Column label="Emp Name">
+ <table:template>
+          <Input value="{empName}" enabled="{= %{salary} > 50000 ? false : true}"/>
+        </table:template>
+      </table:Column>
+
+      <table:Column label="Salary">
+<table:template>
+          <Text text="{salary}" />
+        </table:template>
+      </table:Column>
+
+      <table:Column label="Currency">
+       <table:template>
+          <Text text="{currency}" />
+        </table:template>
+      </table:Column>
+
+    <table:Column label="Smoker">
+       <table:template>
+          <CheckBox selected="{smoker}" />
+        </table:template>
+      </table:Column>
+
+      <table:Column label="Gender">
+       <table:template>
+          <Image src="{gender}" width="40px" height="40px" />
+        </table:template>
+      </table:Column>
+   
+
+   <table:Column label="Martial Status">
+       <table:template>
+        <Select selectedKey="{mStat}">
+            <items>
+                <core:Item key ="M" text="Married" ></core:Item>
+                <core:Item key ="S" text="Single" ></core:Item>
+                <core:Item key ="U" text="Undisclosed" ></core:Item>
+            </items>
+        </Select>
+        </table:template>
+      </table:Column>
+
+      
+      <table:Column label="Rating">
+       <table:template>
+          <RatingIndicator value="{rating}" />
+        </table:template>
+      </table:Column>
+
+    </table:columns>
+  </table:Table>
   <form:SimpleForm editable="true">
     <form:content>
-   
+
       <Label text="Emp Id" />
-      <Input width="25%" id="idEmpId"  value="{empStr/empId}" />
+      <!-- binding notes
+      1. property binding 
+      this is property binding bindings value="{/empStr/empId}"
+      another syntax is value = "{path:'/empStr/empId'}"
+       <Input width="25%" id="idEmpId" value="{/empStr/empId}" />
+      
+      2. expression binding 
+         based on a expression result , some action is taken on field 
+         eg: if name is anubhav , then ,make the salry disabled
+         <Input width="25%" id="idSal" enabled = "{=${/empStr/empName} === 'anubhav'? false:true}" value="{/empStr/salary}" />
+           -->
+      <Input width="25%" id="idEmpId" value="{/empStr/empId}" enabled = "{/empStr/minion}"/>
       <Label text="Emp Name" />
-      <Input width="25%" id="idEmpName" value="{empStr/empName}" />
+      <Input width="25%" id="idEmpName" value="{got>/empStr/empName}" enabled = "{/empStr/minion}"/>
       <Label text="Salary" />
-      <Input width="25%" id="idSal" value="{empStr/salary}" />
+      <Input width="25%" id="idSal" value="{/empStr/salary}" enabled= "{= ${/empStr/empName} === 'Anubhav' ? false : true}" />
       <Label text="Currency" />
-      <Input width="25%" id="idCurr" value="{empStr/currency}" />
+      <Input width="25%" id="idCurr" value="{/empStr/currency}" enabled = "{/empStr/minion}" />
       <Label text="Smoker" />
-      <CheckBox id="idSmoker" selected="{empStr/smoker}" />
+      <CheckBox id="idSmoker" selected="{/empStr/smoker}" enabled = "{/empStr/minion}" />
       <Label/>
       <Button text="Print Data" press="onPrintData" />
+      <Button text="Magic" press="itsMagic" width ="30%" />
     </form:content>
   </form:SimpleForm>
   <Input id="idXmlField" width="40%"/>
-  <Button text="ClickXml" press="onClickButton"/>
+  <Button text="ClickXml" press="onClickButton" id="idMagic"/>
 </mvc:View>

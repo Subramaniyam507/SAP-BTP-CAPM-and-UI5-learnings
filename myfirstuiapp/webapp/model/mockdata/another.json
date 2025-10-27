@@ -1,0 +1,26 @@
+{
+                "empStr":{
+                    "empId":700,
+                    "empName":"John SNow",
+                    "salary":11000,
+                    "currency":"USD",
+                    "smoker": false,
+                    "minion":true
+                },
+                "empTable":[
+                    {
+                    "empId":5010,
+                    "empName":"Alia",
+                    "salary":1500,
+                    "currency":"EURO",
+                    "smoker": true
+                },
+                {
+                     "empId":50220,
+                    "empName":"Ranbir",
+                    "salary":112500,
+                    "currency":"EURO",
+                    "smoker": false
+                }
+                ]
+            }
