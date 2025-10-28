@@ -43,6 +43,19 @@ sap.ui.define([
         
 
         },
+        onSelectRow:function(oEvent){
+          var spathElement = oEvent.getParameter("rowContext").getPath();
+          var oSimpleForm = this.getView().byId("simple")
+          oSimpleForm.bindElement(spathElement)
+
+        //   dynamic binding
+
+         let oview = this.getView()
+          oview.byId("idEmpName").bindValue("empName")
+          oview.byId("idSal").bindValue( "salary")
+          oview.byId("idCurr").bindValue("currency")
+          
+        },
         itsMagic:function(){
             var oModel = sap.ui.getCore().getModel();
             var minion = oModel.getProperty("/empStr/minion")
