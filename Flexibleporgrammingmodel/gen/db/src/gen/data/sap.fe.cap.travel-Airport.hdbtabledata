@@ -1,0 +1,31 @@
+{
+  "format_version": 1,
+  "imports": [
+    {
+      "target_table": "SAP_FE_CAP_TRAVEL_AIRPORT",
+      "source_data": {
+        "data_type": "CSV",
+        "file_name": "sap.fe.cap.travel-Airport.csv",
+        "has_header": true,
+        "type_config": {
+          "delimiter": ";"
+        }
+      },
+      "import_settings": {
+        "import_columns": [
+          "AIRPORTID",
+          "NAME",
+          "CITY",
+          "COUNTRYCODE_CODE"
+        ],
+        "include_filter": []
+      },
+      "column_mappings": {
+        "AIRPORTID": "AirportID",
+        "NAME": "Name",
+        "CITY": "City",
+        "COUNTRYCODE_CODE": "CountryCode_code"
+      }
+    }
+  ]
+}

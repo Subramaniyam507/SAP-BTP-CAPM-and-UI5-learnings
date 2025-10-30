@@ -1,0 +1,5 @@
+VIEW TravelService_SupplementType AS SELECT
+  SupplementType_0.name,
+  SupplementType_0.descr,
+  SupplementType_0.code
+FROM sap_fe_cap_travel_SupplementType AS SupplementType_0

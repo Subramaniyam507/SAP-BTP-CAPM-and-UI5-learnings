@@ -1,0 +1,9 @@
+VIEW sap_fe_cap_travel_BookedFlights AS SELECT
+  Booking_0.to_Customer_CustomerID AS to_Customer_CustomerID,
+  Airline_1.AirlineID,
+  to_Customer_2.LastName AS LastName,
+  Booking_0.BookingUUID,
+  Airline_1.Name,
+  Airline_1.VIPCustomerBookings,
+  Booking_0.to_Travel_TravelUUID
+FROM ((sap_fe_cap_travel_Booking AS Booking_0 LEFT JOIN sap_fe_cap_travel_Airline AS Airline_1 ON Airline_1.AirlineID = Booking_0.to_Carrier_AirlineID) LEFT JOIN sap_fe_cap_travel_Passenger AS to_Customer_2 ON Booking_0.to_Customer_CustomerID = to_Customer_2.CustomerID)

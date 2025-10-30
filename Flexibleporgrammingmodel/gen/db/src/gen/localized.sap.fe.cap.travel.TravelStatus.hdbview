@@ -1,0 +1,8 @@
+VIEW localized_sap_fe_cap_travel_TravelStatus AS SELECT
+  coalesce(localized_1.name, L_0.name) AS name,
+  coalesce(localized_1.descr, L_0.descr) AS descr,
+  L_0.code,
+  L_0.criticality,
+  L_0.fieldControl,
+  L_0.createDeleteHidden
+FROM (sap_fe_cap_travel_TravelStatus AS L_0 LEFT JOIN sap_fe_cap_travel_TravelStatus_texts AS localized_1 ON localized_1.code = L_0.code AND localized_1.locale = SESSION_CONTEXT('LOCALE'))

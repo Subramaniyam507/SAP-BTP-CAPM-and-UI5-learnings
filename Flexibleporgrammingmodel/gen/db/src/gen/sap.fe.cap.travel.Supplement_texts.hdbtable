@@ -1,0 +1,6 @@
+COLUMN TABLE sap_fe_cap_travel_Supplement_texts (
+  locale NVARCHAR(14) NOT NULL,
+  SupplementID NVARCHAR(5000) NOT NULL,
+  Description NVARCHAR(5000),
+  PRIMARY KEY(locale, SupplementID)
+)

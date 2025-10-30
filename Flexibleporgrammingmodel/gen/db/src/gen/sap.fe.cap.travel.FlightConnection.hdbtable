@@ -1,0 +1,11 @@
+COLUMN TABLE sap_fe_cap_travel_FlightConnection (
+  ConnectionID NVARCHAR(5000) NOT NULL,
+  AirlineID NVARCHAR(5000) NOT NULL,
+  DepartureAirport_AirportID NVARCHAR(5000),
+  DestinationAirport_AirportID NVARCHAR(5000),
+  DepartureTime TIME,
+  ArrivalTime TIME,
+  "DISTANCE" INTEGER,
+  DistanceUnit NVARCHAR(5000),
+  PRIMARY KEY(ConnectionID, AirlineID)
+)

@@ -1,0 +1,7 @@
+COLUMN TABLE sap_fe_cap_travel_TravelStatus_texts (
+  locale NVARCHAR(14) NOT NULL,
+  name NVARCHAR(255),
+  descr NVARCHAR(1000),
+  code NVARCHAR(5000) NOT NULL DEFAULT 'O',
+  PRIMARY KEY(locale, code)
+)

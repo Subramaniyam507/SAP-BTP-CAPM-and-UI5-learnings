@@ -1,0 +1,20 @@
+VIEW TravelService_Booking AS SELECT
+  Booking_0.createdAt,
+  Booking_0.createdBy,
+  Booking_0.LastChangedAt,
+  Booking_0.LastChangedBy,
+  Booking_0.BookingUUID,
+  Booking_0.BookingID,
+  Booking_0.BookingDate,
+  Booking_0.ConnectionID,
+  Booking_0.FlightDate,
+  Booking_0.FlightPrice,
+  Booking_0.CurrencyCode_code,
+  Booking_0.BookingStatus_code,
+  Booking_0.to_Carrier_AirlineID,
+  Booking_0.to_Customer_CustomerID,
+  Booking_0.to_Travel_TravelUUID,
+  Booking_0.criticality,
+  Booking_0.BookedFlights,
+  Booking_0.EligibleForPrime
+FROM sap_fe_cap_travel_Booking AS Booking_0

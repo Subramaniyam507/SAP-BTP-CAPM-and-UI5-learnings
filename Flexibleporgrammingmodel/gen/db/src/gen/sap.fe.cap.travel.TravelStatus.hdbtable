@@ -1,0 +1,9 @@
+COLUMN TABLE sap_fe_cap_travel_TravelStatus (
+  name NVARCHAR(255),
+  descr NVARCHAR(1000),
+  code NVARCHAR(5000) NOT NULL DEFAULT 'O',
+  criticality INTEGER,
+  fieldControl INTEGER,
+  createDeleteHidden BOOLEAN,
+  PRIMARY KEY(code)
+)

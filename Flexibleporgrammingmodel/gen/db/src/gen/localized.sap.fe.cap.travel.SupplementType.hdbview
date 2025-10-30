@@ -1,0 +1,5 @@
+VIEW localized_sap_fe_cap_travel_SupplementType AS SELECT
+  coalesce(localized_1.name, L_0.name) AS name,
+  coalesce(localized_1.descr, L_0.descr) AS descr,
+  L_0.code
+FROM (sap_fe_cap_travel_SupplementType AS L_0 LEFT JOIN sap_fe_cap_travel_SupplementType_texts AS localized_1 ON localized_1.code = L_0.code AND localized_1.locale = SESSION_CONTEXT('LOCALE'))

@@ -1,0 +1,47 @@
+{
+  "format_version": 1,
+  "imports": [
+    {
+      "target_table": "SAP_FE_CAP_TRAVEL_BOOKING",
+      "source_data": {
+        "data_type": "CSV",
+        "file_name": "sap.fe.cap.travel-Booking.csv",
+        "has_header": true,
+        "type_config": {
+          "delimiter": ";"
+        }
+      },
+      "import_settings": {
+        "import_columns": [
+          "BOOKINGUUID",
+          "TO_TRAVEL_TRAVELUUID",
+          "BOOKINGID",
+          "BOOKINGDATE",
+          "TO_CUSTOMER_CUSTOMERID",
+          "TO_CARRIER_AIRLINEID",
+          "CONNECTIONID",
+          "FLIGHTDATE",
+          "FLIGHTPRICE",
+          "CURRENCYCODE_CODE",
+          "BOOKINGSTATUS_CODE",
+          "LASTCHANGEDAT"
+        ],
+        "include_filter": []
+      },
+      "column_mappings": {
+        "BOOKINGUUID": "BookingUUID",
+        "TO_TRAVEL_TRAVELUUID": "to_Travel_TravelUUID",
+        "BOOKINGID": "BookingID",
+        "BOOKINGDATE": "BookingDate",
+        "TO_CUSTOMER_CUSTOMERID": "to_Customer_CustomerID",
+        "TO_CARRIER_AIRLINEID": "to_Carrier_AirlineID",
+        "CONNECTIONID": "ConnectionID",
+        "FLIGHTDATE": "FlightDate",
+        "FLIGHTPRICE": "FlightPrice",
+        "CURRENCYCODE_CODE": "CurrencyCode_code",
+        "BOOKINGSTATUS_CODE": "BookingStatus_code",
+        "LASTCHANGEDAT": "LastChangedAt"
+      }
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+COLUMN TABLE sap_fe_cap_travel_Travel (
+  createdAt TIMESTAMP,
+  createdBy NVARCHAR(255),
+  LastChangedAt TIMESTAMP,
+  LastChangedBy NVARCHAR(255),
+  TravelUUID NVARCHAR(5000) NOT NULL,
+  TravelID INTEGER DEFAULT 0,
+  BeginDate DATE,
+  EndDate DATE,
+  BookingFee DECIMAL,
+  TotalPrice DECIMAL,
+  CurrencyCode_code NVARCHAR(3),
+  Description NVARCHAR(5000),
+  TravelStatus_code NVARCHAR(5000) DEFAULT 'O',
+  GoGreen BOOLEAN DEFAULT FALSE,
+  GreenFee DECIMAL,
+  TreesPlanted INTEGER,
+  to_Agency_AgencyID NVARCHAR(5000),
+  to_Customer_CustomerID NVARCHAR(5000),
+  PRIMARY KEY(TravelUUID)
+)

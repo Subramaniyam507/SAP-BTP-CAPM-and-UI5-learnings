@@ -1,0 +1,11 @@
+VIEW TravelService_TravelAgency AS SELECT
+  TravelAgency_0.AgencyID,
+  TravelAgency_0.Name,
+  TravelAgency_0.Street,
+  TravelAgency_0.PostalCode,
+  TravelAgency_0.City,
+  TravelAgency_0.CountryCode_code,
+  TravelAgency_0.PhoneNumber,
+  TravelAgency_0.EMailAddress,
+  TravelAgency_0.WebAddress
+FROM sap_fe_cap_travel_TravelAgency AS TravelAgency_0

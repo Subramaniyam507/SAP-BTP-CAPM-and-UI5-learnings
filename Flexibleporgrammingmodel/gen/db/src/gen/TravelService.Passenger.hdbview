@@ -1,0 +1,16 @@
+VIEW TravelService_Passenger AS SELECT
+  Passenger_0.createdAt,
+  Passenger_0.createdBy,
+  Passenger_0.LastChangedAt,
+  Passenger_0.LastChangedBy,
+  Passenger_0.CustomerID,
+  Passenger_0.FirstName,
+  Passenger_0.LastName,
+  Passenger_0.Title,
+  Passenger_0.Street,
+  Passenger_0.PostalCode,
+  Passenger_0.City,
+  Passenger_0.CountryCode_code,
+  Passenger_0.PhoneNumber,
+  Passenger_0.EMailAddress
+FROM sap_fe_cap_travel_Passenger AS Passenger_0

@@ -1,0 +1,12 @@
+COLUMN TABLE sap_fe_cap_travel_TravelAgency (
+  AgencyID NVARCHAR(5000) NOT NULL,
+  Name NVARCHAR(5000),
+  Street NVARCHAR(5000),
+  PostalCode NVARCHAR(5000),
+  City NVARCHAR(5000),
+  CountryCode_code NVARCHAR(3),
+  PhoneNumber NVARCHAR(5000),
+  EMailAddress NVARCHAR(5000),
+  WebAddress NVARCHAR(5000),
+  PRIMARY KEY(AgencyID)
+)

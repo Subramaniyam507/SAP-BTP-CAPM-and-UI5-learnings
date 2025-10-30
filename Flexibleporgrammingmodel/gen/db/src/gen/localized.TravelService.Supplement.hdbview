@@ -1,0 +1,11 @@
+VIEW localized_TravelService_Supplement AS SELECT
+  Supplement_0.createdAt,
+  Supplement_0.createdBy,
+  Supplement_0.LastChangedAt,
+  Supplement_0.LastChangedBy,
+  Supplement_0.SupplementID,
+  Supplement_0.Price,
+  Supplement_0.Type_code,
+  Supplement_0.Description,
+  Supplement_0.CurrencyCode_code
+FROM localized_sap_fe_cap_travel_Supplement AS Supplement_0

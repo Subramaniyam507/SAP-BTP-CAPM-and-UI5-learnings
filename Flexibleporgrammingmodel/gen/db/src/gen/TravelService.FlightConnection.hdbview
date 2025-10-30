@@ -1,0 +1,10 @@
+VIEW TravelService_FlightConnection AS SELECT
+  FlightConnection_0.ConnectionID,
+  FlightConnection_0.AirlineID,
+  FlightConnection_0.DepartureAirport_AirportID,
+  FlightConnection_0.DestinationAirport_AirportID,
+  FlightConnection_0.DepartureTime,
+  FlightConnection_0.ArrivalTime,
+  FlightConnection_0."DISTANCE",
+  FlightConnection_0.DistanceUnit
+FROM sap_fe_cap_travel_FlightConnection AS FlightConnection_0

@@ -1,0 +1,9 @@
+VIEW TravelService_BookedFlights AS SELECT
+  BookedFlights_0.to_Customer_CustomerID,
+  BookedFlights_0.AirlineID,
+  BookedFlights_0.LastName,
+  BookedFlights_0.BookingUUID,
+  BookedFlights_0.Name,
+  BookedFlights_0.VIPCustomerBookings,
+  BookedFlights_0.to_Travel_TravelUUID
+FROM sap_fe_cap_travel_BookedFlights AS BookedFlights_0

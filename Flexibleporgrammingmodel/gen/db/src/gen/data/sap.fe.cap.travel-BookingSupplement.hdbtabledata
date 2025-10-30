@@ -1,0 +1,39 @@
+{
+  "format_version": 1,
+  "imports": [
+    {
+      "target_table": "SAP_FE_CAP_TRAVEL_BOOKINGSUPPLEMENT",
+      "source_data": {
+        "data_type": "CSV",
+        "file_name": "sap.fe.cap.travel-BookingSupplement.csv",
+        "has_header": true,
+        "type_config": {
+          "delimiter": ";"
+        }
+      },
+      "import_settings": {
+        "import_columns": [
+          "BOOKSUPPLUUID",
+          "TO_TRAVEL_TRAVELUUID",
+          "TO_BOOKING_BOOKINGUUID",
+          "BOOKINGSUPPLEMENTID",
+          "TO_SUPPLEMENT_SUPPLEMENTID",
+          "PRICE",
+          "CURRENCYCODE_CODE",
+          "LASTCHANGEDAT"
+        ],
+        "include_filter": []
+      },
+      "column_mappings": {
+        "BOOKSUPPLUUID": "BookSupplUUID",
+        "TO_TRAVEL_TRAVELUUID": "to_Travel_TravelUUID",
+        "TO_BOOKING_BOOKINGUUID": "to_Booking_BookingUUID",
+        "BOOKINGSUPPLEMENTID": "BookingSupplementID",
+        "TO_SUPPLEMENT_SUPPLEMENTID": "to_Supplement_SupplementID",
+        "PRICE": "Price",
+        "CURRENCYCODE_CODE": "CurrencyCode_code",
+        "LASTCHANGEDAT": "LastChangedAt"
+      }
+    }
+  ]
+}

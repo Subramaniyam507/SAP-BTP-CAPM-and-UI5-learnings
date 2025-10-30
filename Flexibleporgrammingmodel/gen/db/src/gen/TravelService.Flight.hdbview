@@ -1,0 +1,10 @@
+VIEW TravelService_Flight AS SELECT
+  Flight_0.AirlineID,
+  Flight_0.FlightDate,
+  Flight_0.ConnectionID,
+  Flight_0.Price,
+  Flight_0.CurrencyCode_code,
+  Flight_0.PlaneType,
+  Flight_0.MaximumSeats,
+  Flight_0.OccupiedSeats
+FROM sap_fe_cap_travel_Flight AS Flight_0

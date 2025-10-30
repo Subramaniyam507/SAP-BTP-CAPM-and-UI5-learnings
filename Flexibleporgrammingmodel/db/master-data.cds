@@ -4,25 +4,25 @@ namespace sap.fe.cap.travel;
 aspect MasterData {}
 
 entity Airline : MasterData {
-  key AirlineID : String(3);
-  Name          : String(40);
+  key AirlineID : String;
+  Name          : String;
   CurrencyCode  : Currency;
   AirlinePicURL : String      @UI         : {IsImageURL : true};
 };
 
 entity Airport : MasterData {
-  key AirportID : String(3);
-  Name          : String(40);
-  City          : String(40);
+  key AirportID : String;
+  Name          : String;
+  City          : String;
   CountryCode   : Country;
 };
 
 
 entity Supplement : managed, MasterData {
-  key SupplementID : String(10);
-  Price            : Decimal(16, 3);
+  key SupplementID : String;
+  Price            : Decimal;
   Type             : Association to SupplementType;
-  Description      : localized String(1024);
+  Description      : localized String;
   CurrencyCode     : Currency;
 };
 
@@ -31,13 +31,13 @@ entity Flight : MasterData {
   // when cuid is added, the to_Airline & to_Connection can be made managed association,
   // furthermore the AirlineID and ConnectionID can be removed,
   // they will be replaced by the generate FKs for to_Airline & to_Connection
-  key AirlineID    : String(3);
+  key AirlineID    : String;
   key FlightDate   : Date;
-  key ConnectionID : String(4);
+  key ConnectionID : String;
 
-  Price            : Decimal(16, 3);
+  Price            : Decimal;
   CurrencyCode     : Currency;
-  PlaneType        : String(10);
+  PlaneType        : String;
   MaximumSeats     : Integer;
   OccupiedSeats    : Integer;
 
@@ -51,14 +51,14 @@ entity FlightConnection : MasterData {
   // once the TODO in Flight is done, similar change can be applied here
   // to_Airline can be managed association and AirlineID can be removed
   // and will be replaced with the generated FK
-  key ConnectionID   : String(4);
-  key AirlineID      : String(3);
+  key ConnectionID   : String;
+  key AirlineID      : String;
   DepartureAirport   : Association to Airport;
   DestinationAirport : Association to Airport;
   DepartureTime      : Time;
   ArrivalTime        : Time;
   Distance           : Integer;
-  DistanceUnit       : String(3);
+  DistanceUnit       : String;
 
   to_Airline         : Association to Airline
                          on to_Airline.AirlineID = AirlineID;
@@ -67,28 +67,28 @@ entity FlightConnection : MasterData {
 // showcasing unique constrains ??
 // @assert.unique.email: [EMailAddress]
 entity Passenger : managed, MasterData {
-  key CustomerID : String(6);
-  FirstName      : String(40);
-  LastName       : String(40);
-  Title          : String(10);
-  Street         : String(60);
-  PostalCode     : String(10);
-  City           : String(40);
+  key CustomerID : String;
+  FirstName      : String;
+  LastName       : String;
+  Title          : String;
+  Street         : String;
+  PostalCode     : String;
+  City           : String;
   CountryCode    : Country;
-  PhoneNumber    : String(30);
-  EMailAddress   : String(256);
+  PhoneNumber    : String;
+  EMailAddress   : String;
 };
 
 entity TravelAgency : MasterData {
-  key AgencyID : String(6);
-  Name         : String(80);
-  Street       : String(60);
-  PostalCode   : String(10);
-  City         : String(40);
+  key AgencyID : String;
+  Name         : String;
+  Street       : String;
+  PostalCode   : String;
+  City         : String;
   CountryCode  : Country;
-  PhoneNumber  : String(30);
-  EMailAddress : String(256);
-  WebAddress   : String(256);
+  PhoneNumber  : String;
+  EMailAddress : String;
+  WebAddress   : String;
 };
 
 

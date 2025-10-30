@@ -1,0 +1,17 @@
+COLUMN TABLE sap_fe_cap_travel_Passenger (
+  createdAt TIMESTAMP,
+  createdBy NVARCHAR(255),
+  LastChangedAt TIMESTAMP,
+  LastChangedBy NVARCHAR(255),
+  CustomerID NVARCHAR(5000) NOT NULL,
+  FirstName NVARCHAR(5000),
+  LastName NVARCHAR(5000),
+  Title NVARCHAR(5000),
+  Street NVARCHAR(5000),
+  PostalCode NVARCHAR(5000),
+  City NVARCHAR(5000),
+  CountryCode_code NVARCHAR(3),
+  PhoneNumber NVARCHAR(5000),
+  EMailAddress NVARCHAR(5000),
+  PRIMARY KEY(CustomerID)
+)

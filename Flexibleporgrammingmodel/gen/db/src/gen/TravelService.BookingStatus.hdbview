@@ -1,0 +1,5 @@
+VIEW TravelService_BookingStatus AS SELECT
+  BookingStatus_0.name,
+  BookingStatus_0.descr,
+  BookingStatus_0.code
+FROM sap_fe_cap_travel_BookingStatus AS BookingStatus_0

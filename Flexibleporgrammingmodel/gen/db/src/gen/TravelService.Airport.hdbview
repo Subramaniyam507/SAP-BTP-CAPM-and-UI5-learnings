@@ -1,0 +1,6 @@
+VIEW TravelService_Airport AS SELECT
+  Airport_0.AirportID,
+  Airport_0.Name,
+  Airport_0.City,
+  Airport_0.CountryCode_code
+FROM sap_fe_cap_travel_Airport AS Airport_0

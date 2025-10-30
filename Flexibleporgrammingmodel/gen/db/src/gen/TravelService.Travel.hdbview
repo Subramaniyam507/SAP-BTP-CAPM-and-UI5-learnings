@@ -1,0 +1,20 @@
+VIEW TravelService_Travel AS SELECT
+  Travel_0.createdAt,
+  Travel_0.createdBy,
+  Travel_0.LastChangedAt,
+  Travel_0.LastChangedBy,
+  Travel_0.TravelUUID,
+  Travel_0.TravelID,
+  Travel_0.BeginDate,
+  Travel_0.EndDate,
+  Travel_0.BookingFee,
+  Travel_0.TotalPrice,
+  Travel_0.CurrencyCode_code,
+  Travel_0.Description,
+  Travel_0.TravelStatus_code,
+  Travel_0.GoGreen,
+  Travel_0.GreenFee,
+  Travel_0.TreesPlanted,
+  Travel_0.to_Agency_AgencyID,
+  Travel_0.to_Customer_CustomerID
+FROM sap_fe_cap_travel_Travel AS Travel_0

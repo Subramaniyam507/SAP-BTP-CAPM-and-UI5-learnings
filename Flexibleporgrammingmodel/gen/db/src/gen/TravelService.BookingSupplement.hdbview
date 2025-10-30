@@ -1,0 +1,13 @@
+VIEW TravelService_BookingSupplement AS SELECT
+  BookingSupplement_0.createdAt,
+  BookingSupplement_0.createdBy,
+  BookingSupplement_0.LastChangedAt,
+  BookingSupplement_0.LastChangedBy,
+  BookingSupplement_0.BookSupplUUID,
+  BookingSupplement_0.BookingSupplementID,
+  BookingSupplement_0.Price,
+  BookingSupplement_0.CurrencyCode_code,
+  BookingSupplement_0.to_Booking_BookingUUID,
+  BookingSupplement_0.to_Travel_TravelUUID,
+  BookingSupplement_0.to_Supplement_SupplementID
+FROM sap_fe_cap_travel_BookingSupplement AS BookingSupplement_0

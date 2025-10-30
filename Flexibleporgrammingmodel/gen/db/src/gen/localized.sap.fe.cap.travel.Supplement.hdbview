@@ -1,0 +1,11 @@
+VIEW localized_sap_fe_cap_travel_Supplement AS SELECT
+  L_0.createdAt,
+  L_0.createdBy,
+  L_0.LastChangedAt,
+  L_0.LastChangedBy,
+  L_0.SupplementID,
+  L_0.Price,
+  L_0.Type_code,
+  coalesce(localized_1.Description, L_0.Description) AS Description,
+  L_0.CurrencyCode_code
+FROM (sap_fe_cap_travel_Supplement AS L_0 LEFT JOIN sap_fe_cap_travel_Supplement_texts AS localized_1 ON localized_1.SupplementID = L_0.SupplementID AND localized_1.locale = SESSION_CONTEXT('LOCALE'))

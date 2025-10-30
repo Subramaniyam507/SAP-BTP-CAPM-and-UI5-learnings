@@ -1,0 +1,8 @@
+VIEW localized_TravelService_TravelStatus AS SELECT
+  TravelStatus_0.name,
+  TravelStatus_0.descr,
+  TravelStatus_0.code,
+  TravelStatus_0.criticality,
+  TravelStatus_0.fieldControl,
+  TravelStatus_0.createDeleteHidden
+FROM localized_sap_fe_cap_travel_TravelStatus AS TravelStatus_0

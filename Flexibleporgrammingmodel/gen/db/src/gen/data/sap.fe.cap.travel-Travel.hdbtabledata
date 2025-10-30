@@ -1,0 +1,55 @@
+{
+  "format_version": 1,
+  "imports": [
+    {
+      "target_table": "SAP_FE_CAP_TRAVEL_TRAVEL",
+      "source_data": {
+        "data_type": "CSV",
+        "file_name": "sap.fe.cap.travel-Travel.csv",
+        "has_header": true,
+        "type_config": {
+          "delimiter": ";"
+        }
+      },
+      "import_settings": {
+        "import_columns": [
+          "TRAVELUUID",
+          "TRAVELID",
+          "TO_AGENCY_AGENCYID",
+          "TO_CUSTOMER_CUSTOMERID",
+          "BEGINDATE",
+          "ENDDATE",
+          "BOOKINGFEE",
+          "TOTALPRICE",
+          "CURRENCYCODE_CODE",
+          "DESCRIPTION",
+          "TRAVELSTATUS_CODE",
+          "CREATEDBY",
+          "CREATEDAT",
+          "LASTCHANGEDBY",
+          "LASTCHANGEDAT",
+          "GOGREEN"
+        ],
+        "include_filter": []
+      },
+      "column_mappings": {
+        "TRAVELUUID": "TravelUUID",
+        "TRAVELID": "TravelID",
+        "TO_AGENCY_AGENCYID": "to_Agency_AgencyID",
+        "TO_CUSTOMER_CUSTOMERID": "to_Customer_CustomerID",
+        "BEGINDATE": "BeginDate",
+        "ENDDATE": "EndDate",
+        "BOOKINGFEE": "BookingFee",
+        "TOTALPRICE": "TotalPrice",
+        "CURRENCYCODE_CODE": "CurrencyCode_code",
+        "DESCRIPTION": "Description",
+        "TRAVELSTATUS_CODE": "TravelStatus_code",
+        "CREATEDBY": "createdBy",
+        "CREATEDAT": "createdAt",
+        "LASTCHANGEDBY": "LastChangedBy",
+        "LASTCHANGEDAT": "LastChangedAt",
+        "GOGREEN": "GoGreen"
+      }
+    }
+  ]
+}

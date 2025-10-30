@@ -1,0 +1,33 @@
+{
+  "format_version": 1,
+  "imports": [
+    {
+      "target_table": "SAP_FE_CAP_TRAVEL_SUPPLEMENT",
+      "source_data": {
+        "data_type": "CSV",
+        "file_name": "sap.fe.cap.travel-Supplement.csv",
+        "has_header": true,
+        "type_config": {
+          "delimiter": ";"
+        }
+      },
+      "import_settings": {
+        "import_columns": [
+          "SUPPLEMENTID",
+          "PRICE",
+          "TYPE_CODE",
+          "DESCRIPTION",
+          "CURRENCYCODE_CODE"
+        ],
+        "include_filter": []
+      },
+      "column_mappings": {
+        "SUPPLEMENTID": "SupplementID",
+        "PRICE": "Price",
+        "TYPE_CODE": "Type_code",
+        "DESCRIPTION": "Description",
+        "CURRENCYCODE_CODE": "CurrencyCode_code"
+      }
+    }
+  ]
+}

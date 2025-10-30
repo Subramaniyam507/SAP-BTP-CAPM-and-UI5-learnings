@@ -1,7 +1,27 @@
 {
   "dependencies": {
     "@cap-js/hana": "^2",
-    "@sap/cds": "^9.4.4"
+    "@sap/cds": "^9.4.4",
+    "@sap/xssec": "^4.11.0"
   },
-  "cds": {}
+  "cds": {},
+  "devDependencies": {
+    "@sap/cds-dk": "^9",
+    "cds-plugin-ui5": "^0.13.0",
+    "rimraf": "^5.0.5",
+    "mbt": "^1.2.29"
+  },
+  "workspaces": [
+    "app/*"
+  ],
+  "scripts": {
+    "watch-flights": "cds watch --open com.flights.flights/index.html?sap-ui-xx-viewCache=false --livereload false",
+    "undeploy": "cf undeploy Flexibleporgrammingmodel --delete-services --delete-service-keys --delete-service-brokers",
+    "build": "rimraf resources mta_archives && mbt build --mtar archive",
+    "deploy": "cf deploy mta_archives/archive.mtar --retries 1"
+  },
+  "sapux": [
+    "app/flights",
+    "app/flights"
+  ]
 }

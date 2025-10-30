@@ -1,0 +1,7 @@
+COLUMN TABLE sap_fe_cap_travel_Airport (
+  AirportID NVARCHAR(5000) NOT NULL,
+  Name NVARCHAR(5000),
+  City NVARCHAR(5000),
+  CountryCode_code NVARCHAR(3),
+  PRIMARY KEY(AirportID)
+)

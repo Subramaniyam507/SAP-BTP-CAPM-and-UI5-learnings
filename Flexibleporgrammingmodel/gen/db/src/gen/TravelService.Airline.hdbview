@@ -1,0 +1,7 @@
+VIEW TravelService_Airline AS SELECT
+  Airline_0.AirlineID,
+  Airline_0.Name,
+  Airline_0.CurrencyCode_code,
+  Airline_0.AirlinePicURL,
+  Airline_0.VIPCustomerBookings
+FROM sap_fe_cap_travel_Airline AS Airline_0

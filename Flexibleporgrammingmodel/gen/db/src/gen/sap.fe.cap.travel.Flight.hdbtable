@@ -1,0 +1,11 @@
+COLUMN TABLE sap_fe_cap_travel_Flight (
+  AirlineID NVARCHAR(5000) NOT NULL,
+  FlightDate DATE NOT NULL,
+  ConnectionID NVARCHAR(5000) NOT NULL,
+  Price DECIMAL,
+  CurrencyCode_code NVARCHAR(3),
+  PlaneType NVARCHAR(5000),
+  MaximumSeats INTEGER,
+  OccupiedSeats INTEGER,
+  PRIMARY KEY(AirlineID, FlightDate, ConnectionID)
+)

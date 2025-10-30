@@ -10,29 +10,29 @@ using {
 namespace sap.fe.cap.travel;
 
 entity Travel : managed {
-  key TravelUUID : String(30);
+  key TravelUUID : String;
   TravelID       : Integer @readonly default 0 @Common.Text: Description;
   BeginDate      : Date;
   EndDate        : Date;
-  BookingFee     : Decimal(16, 3);
-  TotalPrice     : Decimal(16, 3) @readonly;
+  BookingFee     : Decimal;
+  TotalPrice     : Decimal @readonly;
   CurrencyCode   : Currency;
-  Description    : String(1024);
+  Description    : String;
   TravelStatus   : Association to TravelStatus  @readonly @Common.ValueListWithFixedValues;
   GoGreen        : Boolean default false;
-  GreenFee       : Decimal(16, 3) @Core.Computed @readonly;
+  GreenFee       : Decimal @Core.Computed @readonly;
   TreesPlanted   : Integer @Core.Computed @readonly;  
   to_Agency      : Association to TravelAgency;
   to_Customer    : Association to Passenger;
   to_Booking     : Composition of many Booking on to_Booking.to_Travel = $self;
 };
 entity Booking : managed {
-  key BookingUUID   : String(30);
+  key BookingUUID   : String;
   BookingID         : Integer @Core.Computed;
   BookingDate       : Date;
-  ConnectionID      : String(4);
+  ConnectionID      : String;
   FlightDate        : Date;
-  FlightPrice       : Decimal(16, 3);
+  FlightPrice       : Decimal;
   CurrencyCode      : Currency;
   BookingStatus     : Association to BookingStatus;
   to_BookSupplement : Composition of many BookingSupplement on to_BookSupplement.to_Booking = $self;
@@ -47,7 +47,7 @@ entity Booking : managed {
 entity BookingSupplement : managed {
   key BookSupplUUID   : UUID;
   BookingSupplementID : Integer @Core.Computed;
-  Price               : Decimal(16, 3);
+  Price               : Decimal;
   CurrencyCode        : Currency;
   to_Booking          : Association to Booking;
   to_Travel           : Association to Travel;

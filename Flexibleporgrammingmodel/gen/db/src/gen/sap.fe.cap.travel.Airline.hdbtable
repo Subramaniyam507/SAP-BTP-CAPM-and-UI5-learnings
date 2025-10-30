@@ -1,0 +1,8 @@
+COLUMN TABLE sap_fe_cap_travel_Airline (
+  AirlineID NVARCHAR(5000) NOT NULL,
+  Name NVARCHAR(5000),
+  CurrencyCode_code NVARCHAR(3),
+  AirlinePicURL NVARCHAR(5000),
+  VIPCustomerBookings INTEGER,
+  PRIMARY KEY(AirlineID)
+)

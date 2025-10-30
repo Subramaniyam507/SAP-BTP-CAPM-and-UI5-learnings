@@ -1,0 +1,6 @@
+COLUMN TABLE sap_fe_cap_travel_SupplementType (
+  name NVARCHAR(255),
+  descr NVARCHAR(1000),
+  code NVARCHAR(5000) NOT NULL,
+  PRIMARY KEY(code)
+)

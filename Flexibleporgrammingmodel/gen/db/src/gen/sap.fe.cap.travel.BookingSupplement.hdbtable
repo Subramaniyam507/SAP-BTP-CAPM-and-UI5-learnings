@@ -1,0 +1,14 @@
+COLUMN TABLE sap_fe_cap_travel_BookingSupplement (
+  createdAt TIMESTAMP,
+  createdBy NVARCHAR(255),
+  LastChangedAt TIMESTAMP,
+  LastChangedBy NVARCHAR(255),
+  BookSupplUUID NVARCHAR(36) NOT NULL,
+  BookingSupplementID INTEGER,
+  Price DECIMAL,
+  CurrencyCode_code NVARCHAR(3),
+  to_Booking_BookingUUID NVARCHAR(5000),
+  to_Travel_TravelUUID NVARCHAR(5000),
+  to_Supplement_SupplementID NVARCHAR(5000),
+  PRIMARY KEY(BookSupplUUID)
+)

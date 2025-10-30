@@ -1,0 +1,18 @@
+COLUMN TABLE TravelService_BookingSupplement_drafts (
+  createdAt TIMESTAMP NULL,
+  createdBy NVARCHAR(255) NULL,
+  LastChangedAt TIMESTAMP NULL,
+  LastChangedBy NVARCHAR(255) NULL,
+  BookSupplUUID NVARCHAR(36) NOT NULL,
+  BookingSupplementID INTEGER NULL,
+  Price DECIMAL NULL,
+  CurrencyCode_code NVARCHAR(3) NULL,
+  to_Booking_BookingUUID NVARCHAR(5000) NULL,
+  to_Travel_TravelUUID NVARCHAR(5000) NULL,
+  to_Supplement_SupplementID NVARCHAR(5000) NULL,
+  IsActiveEntity BOOLEAN,
+  HasActiveEntity BOOLEAN,
+  HasDraftEntity BOOLEAN,
+  DraftAdministrativeData_DraftUUID NVARCHAR(36) NOT NULL,
+  PRIMARY KEY(BookSupplUUID)
+)

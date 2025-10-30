@@ -1,0 +1,12 @@
+COLUMN TABLE sap_fe_cap_travel_Supplement (
+  createdAt TIMESTAMP,
+  createdBy NVARCHAR(255),
+  LastChangedAt TIMESTAMP,
+  LastChangedBy NVARCHAR(255),
+  SupplementID NVARCHAR(5000) NOT NULL,
+  Price DECIMAL,
+  Type_code NVARCHAR(5000),
+  Description NVARCHAR(5000),
+  CurrencyCode_code NVARCHAR(3),
+  PRIMARY KEY(SupplementID)
+)
